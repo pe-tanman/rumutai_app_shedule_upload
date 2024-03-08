@@ -5,7 +5,7 @@ from firebase_admin import credentials
 import pandas as pd
 
 ##設定##
-original_excel_path = "2023early_schedule.xlsx" #日程表のパス
+original_excel_path = "schedule.xlsx" #日程表のパス
 sheet_names = ["一日目", '二日目']#メインの日程表のシート名
 time_row = 7#開始時間が書かれている行-1を指定 (第8行→7)
 place_column = 1#試合場所が書かれている列-1を指定 (B列→1)
@@ -104,7 +104,7 @@ db = firestore.client()
 if season == 'Zenki':
    collection_ref = db.collection("gameDataZenki")
 elif season == 'Kouki':
-   collection_ref = db.collection("Test1")#TODO
+   collection_ref = db.collection("gameDataKouki")
 else:
    print("seasonの値が正しく指定されていません")
    exit()

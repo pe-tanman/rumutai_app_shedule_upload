@@ -6,7 +6,7 @@ from firebase_admin import credentials
 import pandas as pd
 
 ##設定
-original_excel_path = "2023early_referees.xlsx" #日程表のパス
+original_excel_path = "referees.xlsx" #日程表のパス
 sheet_name = "一覧表"#メインの日程表のシート名
 head_row = 1 #先頭の行-1を指定　(行2→1)
 id_column = 3#試合コードが書かれている列-1を指定 (D列→3)
